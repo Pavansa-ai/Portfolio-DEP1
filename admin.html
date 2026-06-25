@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zentro — Admin</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: var(--z-void);
+    }
+
+    .z-admin {
+      max-width: 1100px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+
+    .z-admin__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .z-admin__title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.6rem;
+      color: var(--z-text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .z-admin__title span {
+      color: var(--z-accent);
+    }
+
+    .z-admin__user {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--z-text-secondary);
+    }
+
+    .z-admin__center {
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 1.25rem;
+    }
+
+    .z-admin__center p {
+      color: var(--z-text-secondary);
+      font-size: 0.95rem;
+      max-width: 380px;
+      line-height: 1.6;
+    }
+
+    .z-google-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.8rem 1.5rem;
+      background: var(--z-surface-elevated);
+      border: 1px solid var(--z-border);
+      border-radius: 8px;
+      color: var(--z-text-primary);
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: border-color 0.2s var(--z-ease-smooth), background 0.2s var(--z-ease-smooth);
+    }
+
+    .z-google-btn:hover {
+      border-color: var(--z-border-hover);
+      background: var(--z-surface-hover);
+    }
+
+    .z-signout-btn {
+      background: none;
+      border: 1px solid var(--z-border);
+      border-radius: 6px;
+      color: var(--z-text-secondary);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      padding: 0.4rem 0.8rem;
+      cursor: pointer;
+      transition: border-color 0.2s var(--z-ease-smooth), color 0.2s var(--z-ease-smooth);
+    }
+
+    .z-signout-btn:hover {
+      border-color: var(--z-border-hover);
+      color: var(--z-text-primary);
+    }
+
+    .z-admin__stats {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+      flex-wrap: wrap;
+    }
+
+    .z-stat {
+      background: var(--z-surface);
+      border: 1px solid var(--z-border);
+      border-radius: 10px;
+      padding: 0.9rem 1.25rem;
+      min-width: 110px;
+    }
+
+    .z-stat__value {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.4rem;
+      color: var(--z-accent);
+    }
+
+    .z-stat__label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--z-text-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 0.2rem;
+    }
+
+    .z-leads {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .z-lead-card {
+      background: var(--z-surface);
+      border: 1px solid var(--z-border);
+      border-radius: 12px;
+      padding: 1.25rem 1.4rem;
+      transition: border-color 0.2s var(--z-ease-smooth);
+    }
+
+    .z-lead-card:hover {
+      border-color: var(--z-border-hover);
+    }
+
+    .z-lead-card__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.6rem;
+    }
+
+    .z-lead-card__name {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--z-text-primary);
+    }
+
+    .z-lead-card__biz {
+      color: var(--z-text-secondary);
+      font-size: 0.85rem;
+    }
+
+    .z-lead-card__time {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--z-text-tertiary);
+      white-space: nowrap;
+    }
+
+    .z-lead-card__row {
+      display: flex;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--z-text-secondary);
+      margin-bottom: 0.3rem;
+      flex-wrap: wrap;
+    }
+
+    .z-lead-card__row strong {
+      color: var(--z-text-primary);
+      font-weight: 500;
+    }
+
+    .z-chips-mini {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+    }
+
+    .z-chip-mini {
+      background: var(--z-accent-glow);
+      color: var(--z-accent-hover);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 100px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .z-lead-card__desc {
+      margin-top: 0.7rem;
+      font-size: 0.85rem;
+      color: var(--z-text-secondary);
+      line-height: 1.5;
+      white-space: pre-wrap;
+    }
+
+    .z-lead-card__actions {
+      margin-top: 0.85rem;
+      display: flex;
+      gap: 0.6rem;
+    }
+
+    .z-lead-card__delete {
+      background: none;
+      border: 1px solid var(--z-border);
+      color: var(--z-text-tertiary);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .z-lead-card__delete:hover {
+      color: #f87171;
+      border-color: #f87171;
+    }
+
+    .z-empty {
+      text-align: center;
+      padding: 4rem 1rem;
+      color: var(--z-text-tertiary);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="z-admin">
+    <div class="z-admin__header">
+      <div class="z-admin__title">ZENTRO <span>/ ADMIN</span></div>
+      <div id="userBar"></div>
+    </div>
+
+    <div id="signedOutView" class="z-admin__center" style="display:none;">
+      <p>Sign in with the Zentro admin Google account to view submitted project briefs.</p>
+      <button class="z-google-btn" id="googleSignInBtn">
+        <svg width="18" height="18" viewBox="0 0 18 18"><path fill="#4285F4" d="M17.64 9.2c0-.64-.06-1.25-.16-1.84H9v3.48h4.84c-.21 1.12-.84 2.07-1.8 2.7v2.26h2.92c1.7-1.57 2.68-3.88 2.68-6.6z"/><path fill="#34A853" d="M9 18c2.43 0 4.47-.8 5.96-2.18l-2.92-2.26c-.8.55-1.84.87-3.04.87-2.34 0-4.32-1.58-5.03-3.7H.96v2.33A9 9 0 0 0 9 18z"/><path fill="#FBBC05" d="M3.97 10.73A5.4 5.4 0 0 1 3.68 9c0-.6.1-1.18.29-1.73V4.94H.96A9 9 0 0 0 0 9c0 1.45.35 2.83.96 4.06l3.01-2.33z"/><path fill="#EA4335" d="M9 3.58c1.32 0 2.5.45 3.44 1.35l2.58-2.58C13.46.89 11.42 0 9 0A9 9 0 0 0 .96 4.94L3.97 7.27C4.68 5.16 6.66 3.58 9 3.58z"/></svg>
+        Continue with Google
+      </button>
+    </div>
+
+    <div id="unauthorizedView" class="z-admin__center" style="display:none;">
+      <p>This Google account doesn't have access to the admin panel.</p>
+      <button class="z-signout-btn" id="unauthorizedSignOutBtn">Sign out and try another account</button>
+    </div>
+
+    <div id="loadingView" class="z-admin__center" style="display:none;">
+      <p>Loading…</p>
+    </div>
+
+    <div id="dashboardView" style="display:none;">
+      <div class="z-admin__stats">
+        <div class="z-stat">
+          <div class="z-stat__value" id="statTotal">0</div>
+          <div class="z-stat__label">Total Briefs</div>
+        </div>
+        <div class="z-stat">
+          <div class="z-stat__value" id="statToday">0</div>
+          <div class="z-stat__label">Today</div>
+        </div>
+        <div class="z-stat">
+          <div class="z-stat__value" id="statWeek">0</div>
+          <div class="z-stat__label">Last 7 Days</div>
+        </div>
+      </div>
+
+      <div class="z-leads" id="leadsContainer"></div>
+      <div class="z-empty" id="emptyState" style="display:none;">No project briefs yet.</div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    const SUPABASE_URL = 'https://hlvflflyfyvxzvuwzgqm.supabase.co';
+    const SUPABASE_ANON_KEY = 'sb_publishable_he43u9JV_Dswv4R5vKUPhA_BLA6XHNQ';
+    const ADMIN_EMAIL = 'pavansa0201@gmail.com';
+
+    const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+    const views = {
+      signedOut: document.getElementById('signedOutView'),
+      unauthorized: document.getElementById('unauthorizedView'),
+      loading: document.getElementById('loadingView'),
+      dashboard: document.getElementById('dashboardView')
+    };
+
+    function showView(name) {
+      Object.values(views).forEach(v => v.style.display = 'none');
+      views[name].style.display = 'flex';
+      if (name === 'dashboard') views.dashboard.style.display = 'block';
+    }
+
+    function renderUserBar(email) {
+      const bar = document.getElementById('userBar');
+      if (!email) { bar.innerHTML = ''; return; }
+      bar.innerHTML = `
+        <div class="z-admin__user">
+          <span>${email}</span>
+          <button class="z-signout-btn" id="signOutBtn">Sign out</button>
+        </div>`;
+      document.getElementById('signOutBtn').addEventListener('click', async () => {
+        await sb.auth.signOut();
+        location.reload();
+      });
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    }
+
+    function timeAgo(iso) {
+      const diffMs = Date.now() - new Date(iso).getTime();
+      const mins = Math.floor(diffMs / 60000);
+      if (mins < 1) return 'just now';
+      if (mins < 60) return `${mins}m ago`;
+      const hrs = Math.floor(mins / 60);
+      if (hrs < 24) return `${hrs}h ago`;
+      const days = Math.floor(hrs / 24);
+      return `${days}d ago`;
+    }
+
+    async function loadLeads() {
+      showView('loading');
+
+      const { data, error } = await sb
+        .from('leads')
+        .select('*')
+        .order('created_at', { ascending: false });
+
+      if (error) {
+        console.error('Failed to load leads:', error);
+        document.getElementById('leadsContainer').innerHTML = `<div class="z-empty">Couldn't load leads: ${escapeHtml(error.message)}</div>`;
+        showView('dashboard');
+        return;
+      }
+
+      renderDashboard(data || []);
+      showView('dashboard');
+    }
+
+    function renderDashboard(leads) {
+      const now = Date.now();
+      const oneDay = 24 * 60 * 60 * 1000;
+
+      document.getElementById('statTotal').textContent = leads.length;
+      document.getElementById('statToday').textContent =
+        leads.filter(l => now - new Date(l.created_at).getTime() < oneDay).length;
+      document.getElementById('statWeek').textContent =
+        leads.filter(l => now - new Date(l.created_at).getTime() < oneDay * 7).length;
+
+      const container = document.getElementById('leadsContainer');
+      const emptyState = document.getElementById('emptyState');
+
+      if (leads.length === 0) {
+        container.innerHTML = '';
+        emptyState.style.display = 'block';
+        return;
+      }
+      emptyState.style.display = 'none';
+
+      container.innerHTML = leads.map(lead => `
+        <div class="z-lead-card" data-id="${lead.id}">
+          <div class="z-lead-card__top">
+            <div>
+              <div class="z-lead-card__name">${escapeHtml(lead.contact_name)}</div>
+              <div class="z-lead-card__biz">${escapeHtml(lead.biz_name) || 'No business name given'}${lead.biz_industry ? ' · ' + escapeHtml(lead.biz_industry) : ''}</div>
+            </div>
+            <div class="z-lead-card__time">${timeAgo(lead.created_at)}</div>
+          </div>
+
+          <div class="z-lead-card__row"><strong>Email</strong> ${escapeHtml(lead.contact_email)}</div>
+          ${lead.contact_phone ? `<div class="z-lead-card__row"><strong>Phone</strong> ${escapeHtml(lead.contact_phone)} · prefers ${escapeHtml(lead.contact_method)}</div>` : ''}
+          ${lead.budget ? `<div class="z-lead-card__row"><strong>Budget</strong> ${escapeHtml(lead.budget)} &nbsp; <strong>Timeline</strong> ${escapeHtml(lead.timeline)}</div>` : ''}
+          ${lead.goals ? `<div class="z-lead-card__desc"><strong style="color:var(--z-text-primary)">Goals:</strong> ${escapeHtml(lead.goals)}</div>` : ''}
+          ${lead.project_desc ? `<div class="z-lead-card__desc"><strong style="color:var(--z-text-primary)">Notes:</strong> ${escapeHtml(lead.project_desc)}</div>` : ''}
+          ${lead.bizUrl ? '' : ''}
+          ${(lead.services && lead.services.length) ? `<div class="z-chips-mini">${lead.services.map(s => `<span class="z-chip-mini">${escapeHtml(s)}</span>`).join('')}</div>` : ''}
+          ${lead.auth_email ? `<div class="z-lead-card__row" style="margin-top:0.5rem;"><strong>Verified via</strong> ${escapeHtml(lead.auth_email)}</div>` : ''}
+
+          <div class="z-lead-card__actions">
+            <button class="z-lead-card__delete" data-delete="${lead.id}">Delete</button>
+          </div>
+        </div>
+      `).join('');
+
+      container.querySelectorAll('[data-delete]').forEach(btn => {
+        btn.addEventListener('click', async () => {
+          if (!confirm('Delete this lead permanently?')) return;
+          const id = btn.dataset.delete;
+          const { error } = await sb.from('leads').delete().eq('id', id);
+          if (error) {
+            alert('Could not delete: ' + error.message);
+            return;
+          }
+          loadLeads();
+        });
+      });
+    }
+
+    async function init() {
+      showView('loading');
+      const { data: { session } } = await sb.auth.getSession();
+
+      if (!session) {
+        renderUserBar(null);
+        showView('signedOut');
+        return;
+      }
+
+      const email = session.user.email;
+      renderUserBar(email);
+
+      if (email !== ADMIN_EMAIL) {
+        showView('unauthorized');
+        return;
+      }
+
+      loadLeads();
+    }
+
+    document.getElementById('googleSignInBtn').addEventListener('click', async () => {
+      await sb.auth.signInWithOAuth({
+        provider: 'google',
+        options: { redirectTo: window.location.href }
+      });
+    });
+
+    document.getElementById('unauthorizedSignOutBtn').addEventListener('click', async () => {
+      await sb.auth.signOut();
+      location.reload();
+    });
+
+    init();
+  </script>
+</body>
+</html>

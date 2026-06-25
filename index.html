@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZENTRO — Building Products People Remember</title>
+  <meta name="description" content="Zentro is a premium digital product studio crafting websites, brands, and digital experiences for businesses that refuse to blend in.">
+  <meta property="og:title" content="ZENTRO — Building Products People Remember">
+  <meta property="og:description" content="Premium digital product studio crafting websites, brands, and digital experiences for businesses that refuse to blend in.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ZENTRO — Building Products People Remember">
+  <meta name="twitter:description" content="Premium digital product studio crafting websites, brands, and digital experiences.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- ATMOSPHERIC BACKGROUND                  -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="z-atmosphere" aria-hidden="true">
+    <div class="z-orb z-orb--1"></div>
+    <div class="z-orb z-orb--2"></div>
+    <div class="z-orb z-orb--3"></div>
+    <div class="z-grain"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- CURSOR GLOW (hero only)                 -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="z-cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- NAVIGATION                              -->
+  <!-- ═══════════════════════════════════════ -->
+  <nav class="z-nav" id="mainNav">
+    <div class="z-nav__inner">
+      <a href="#" class="z-nav__logo" aria-label="Zentro Home">
+        <span class="z-nav__logo-z">Z</span>
+        <span class="z-nav__logo-text">ZENTRO</span>
+      </a>
+      <div class="z-nav__links">
+        <a href="#philosophy" class="z-nav__link">Philosophy</a>
+        <a href="#solutions" class="z-nav__link">Solutions</a>
+        <a href="#arsenal" class="z-nav__link">Services</a>
+        <a href="#conviction" class="z-nav__link">Why Us</a>
+      </div>
+      <button class="z-btn z-btn--primary z-nav__cta" id="navCta" aria-label="Start a project">
+        <span>Start a Project</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="z-nav__burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile nav overlay -->
+  <div class="z-mobile-nav" id="mobileNav">
+    <a href="#philosophy" class="z-mobile-nav__link">Philosophy</a>
+    <a href="#solutions" class="z-mobile-nav__link">Solutions</a>
+    <a href="#arsenal" class="z-mobile-nav__link">Services</a>
+    <a href="#conviction" class="z-mobile-nav__link">Why Us</a>
+    <button class="z-btn z-btn--primary z-mobile-nav__cta" id="mobileCta">Start a Project</button>
+  </div>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- SCENE 1 — HERO / ORIGIN                -->
+    <!-- ═══════════════════════════════════════ -->
+    <section class="z-scene z-scene--hero" id="hero">
+      <div class="z-scene__inner z-hero">
+        <span class="z-scene__label z-reveal" data-delay="0.6">01 / ORIGIN</span>
+
+        <h1 class="z-hero__title" aria-label="ZENTRO">
+          <span class="z-hero__letter z-reveal" data-delay="0.3">Z</span>
+          <span class="z-hero__letter z-reveal" data-delay="0.38">E</span>
+          <span class="z-hero__letter z-reveal" data-delay="0.46">N</span>
+          <span class="z-hero__letter z-reveal" data-delay="0.54">T</span>
+          <span class="z-hero__letter z-reveal" data-delay="0.62">R</span>
+          <span class="z-hero__letter z-reveal" data-delay="0.70">O</span>
+        </h1>
+
+        <p class="z-hero__tagline z-reveal" data-delay="0.9">Building Products People Remember.</p>
+
+        <div class="z-hero__scroll z-reveal" data-delay="1.8" aria-hidden="true">
+          <div class="z-hero__scroll-line"></div>
+          <span class="z-hero__scroll-text">Scroll</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCROLL MARQUEE 1 -->
+    <div class="z-scroll-marquee" aria-hidden="true" data-direction="left">
+      <span class="z-scroll-marquee__text">ZENTRO</span>
+      <span class="z-scroll-marquee__dot">·</span>
+      <span class="z-scroll-marquee__text">ZENTRO</span>
+      <span class="z-scroll-marquee__dot">·</span>
+      <span class="z-scroll-marquee__text">ZENTRO</span>
+      <span class="z-scroll-marquee__dot">·</span>
+      <span class="z-scroll-marquee__text">ZENTRO</span>
+      <span class="z-scroll-marquee__dot">·</span>
+      <span class="z-scroll-marquee__text">ZENTRO</span>
+    </div>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- SCENE 2 — PHILOSOPHY                   -->
+    <!-- ═══════════════════════════════════════ -->
+    <section class="z-scene z-scene--philosophy" id="philosophy">
+      <div class="z-scene__inner">
+        <span class="z-scene__label z-reveal">02 / PHILOSOPHY</span>
+
+        <div class="z-philosophy__manifesto">
+          <h2 class="z-philosophy__headline z-reveal-words">
+            We don't build websites. We build the first impression your business will ever make.
+          </h2>
+        </div>
+
+        <div class="z-philosophy__divider z-reveal-line"></div>
+
+        <div class="z-philosophy__principles">
+          <div class="z-philosophy__principle z-reveal" data-delay="0.1">
+            <h3 class="z-philosophy__principle-title">Precision</h3>
+            <p class="z-philosophy__principle-text">Every pixel is a decision. Every interaction is intentional. We don't do "close enough."</p>
+          </div>
+          <div class="z-philosophy__principle z-reveal" data-delay="0.2">
+            <h3 class="z-philosophy__principle-title">Obsession</h3>
+            <p class="z-philosophy__principle-text">We don't ship until it's remarkable. Your product deserves nothing less than obsessive care.</p>
+          </div>
+          <div class="z-philosophy__principle z-reveal" data-delay="0.3">
+            <h3 class="z-philosophy__principle-title">Clarity</h3>
+            <p class="z-philosophy__principle-text">Complex problems, simple solutions. We cut through noise to find what truly matters.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCROLL MARQUEE 2 -->
+    <div class="z-scroll-marquee" aria-hidden="true" data-direction="right">
+      <span class="z-scroll-marquee__text">ZENTRO</span>
+      <span class="z-scroll-marquee__dot">·</span>
+      <span class="z-scroll-marquee__text">ZENTRO</span>
+      <span class="z-scroll-marquee__dot">·</span>
+      <span class="z-scroll-marquee__text">ZENTRO</span>
+      <span class="z-scroll-marquee__dot">·</span>
+      <span class="z-scroll-marquee__text">ZENTRO</span>
+      <span class="z-scroll-marquee__dot">·</span>
+      <span class="z-scroll-marquee__text">ZENTRO</span>
+    </div>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- SCENE 3 — TRANSFORMATIONS               -->
+    <!-- ═══════════════════════════════════════ -->
+    <section class="z-scene z-scene--transformations" id="solutions">
+      <div class="z-scene__inner">
+        <span class="z-scene__label z-reveal">03 / TRANSFORMATIONS</span>
+
+        <h2 class="z-transformations__heading z-reveal">We don't sell services.<br><span class="z-text-accent">We deliver outcomes.</span></h2>
+
+        <div class="z-transformations__list">
+          <div class="z-transformation z-reveal" data-delay="0.05">
+            <div class="z-transformation__bar"></div>
+            <p class="z-transformation__text">Your digital storefront never sleeps — converting visitors at 3 AM.</p>
+            <span class="z-transformation__arrow">→</span>
+          </div>
+          <div class="z-transformation z-reveal" data-delay="0.10">
+            <div class="z-transformation__bar"></div>
+            <p class="z-transformation__text">Every landing page becomes a believer-making machine.</p>
+            <span class="z-transformation__arrow">→</span>
+          </div>
+          <div class="z-transformation z-reveal" data-delay="0.15">
+            <div class="z-transformation__bar"></div>
+            <p class="z-transformation__text">Every table in your restaurant becomes a conversion point.</p>
+            <span class="z-transformation__arrow">→</span>
+          </div>
+          <div class="z-transformation z-reveal" data-delay="0.20">
+            <div class="z-transformation__bar"></div>
+            <p class="z-transformation__text">Your reputation arrives before you do — dominating local search.</p>
+            <span class="z-transformation__arrow">→</span>
+          </div>
+          <div class="z-transformation z-reveal" data-delay="0.25">
+            <div class="z-transformation__bar"></div>
+            <p class="z-transformation__text">Ordering without friction, revenue without limits — via WhatsApp.</p>
+            <span class="z-transformation__arrow">→</span>
+          </div>
+          <div class="z-transformation z-reveal" data-delay="0.30">
+            <div class="z-transformation__bar"></div>
+            <p class="z-transformation__text">Your identity speaks before you do — with a brand that commands respect.</p>
+            <span class="z-transformation__arrow">→</span>
+          </div>
+          <div class="z-transformation z-reveal" data-delay="0.35">
+            <div class="z-transformation__bar"></div>
+            <p class="z-transformation__text">Automate what drains you. Focus on what drives you — with AI.</p>
+            <span class="z-transformation__arrow">→</span>
+          </div>
+          <div class="z-transformation z-reveal" data-delay="0.40">
+            <div class="z-transformation__bar"></div>
+            <p class="z-transformation__text">Your resume stops being ignored. Your LinkedIn starts opening doors.</p>
+            <span class="z-transformation__arrow">→</span>
+          </div>
+          <div class="z-transformation z-reveal" data-delay="0.45">
+            <div class="z-transformation__bar"></div>
+            <p class="z-transformation__text">Your ideas ship. Not someday. Now. MVP to market — fast.</p>
+            <span class="z-transformation__arrow">→</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCROLL MARQUEE 3 -->
+    <div class="z-scroll-marquee" aria-hidden="true" data-direction="left">
+      <span class="z-scroll-marquee__text">ZENTRO</span>
+      <span class="z-scroll-marquee__dot">·</span>
+      <span class="z-scroll-marquee__text">ZENTRO</span>
+      <span class="z-scroll-marquee__dot">·</span>
+      <span class="z-scroll-marquee__text">ZENTRO</span>
+      <span class="z-scroll-marquee__dot">·</span>
+      <span class="z-scroll-marquee__text">ZENTRO</span>
+      <span class="z-scroll-marquee__dot">·</span>
+      <span class="z-scroll-marquee__text">ZENTRO</span>
+    </div>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- SCENE 4 — ARSENAL / SERVICES            -->
+    <!-- ═══════════════════════════════════════ -->
+    <section class="z-scene z-scene--arsenal" id="arsenal">
+      <div class="z-scene__inner">
+        <span class="z-scene__label z-reveal">04 / ARSENAL</span>
+
+        <h2 class="z-arsenal__heading z-reveal">What we build.</h2>
+
+        <div class="z-arsenal__grid">
+          <!-- Service Nav -->
+          <div class="z-arsenal__nav z-reveal" data-delay="0.1">
+            <button class="z-arsenal__nav-item is-active" data-service="websites">
+              <span class="z-arsenal__nav-indicator"></span>
+              <span class="z-arsenal__nav-label">Websites</span>
+            </button>
+            <button class="z-arsenal__nav-item" data-service="landing">
+              <span class="z-arsenal__nav-indicator"></span>
+              <span class="z-arsenal__nav-label">Landing Pages</span>
+            </button>
+            <button class="z-arsenal__nav-item" data-service="qr">
+              <span class="z-arsenal__nav-indicator"></span>
+              <span class="z-arsenal__nav-label">QR Menu Systems</span>
+            </button>
+            <button class="z-arsenal__nav-item" data-service="google">
+              <span class="z-arsenal__nav-indicator"></span>
+              <span class="z-arsenal__nav-label">Google Optimization</span>
+            </button>
+            <button class="z-arsenal__nav-item" data-service="whatsapp">
+              <span class="z-arsenal__nav-indicator"></span>
+              <span class="z-arsenal__nav-label">WhatsApp Ordering</span>
+            </button>
+            <button class="z-arsenal__nav-item" data-service="branding">
+              <span class="z-arsenal__nav-indicator"></span>
+              <span class="z-arsenal__nav-label">Branding & Identity</span>
+            </button>
+            <button class="z-arsenal__nav-item" data-service="ai">
+              <span class="z-arsenal__nav-indicator"></span>
+              <span class="z-arsenal__nav-label">AI Automations</span>
+            </button>
+            <button class="z-arsenal__nav-item" data-service="resume">
+              <span class="z-arsenal__nav-indicator"></span>
+              <span class="z-arsenal__nav-label">Resume Optimization</span>
+            </button>
+            <button class="z-arsenal__nav-item" data-service="linkedin">
+              <span class="z-arsenal__nav-indicator"></span>
+              <span class="z-arsenal__nav-label">LinkedIn Optimization</span>
+            </button>
+            <button class="z-arsenal__nav-item" data-service="mvp">
+              <span class="z-arsenal__nav-indicator"></span>
+              <span class="z-arsenal__nav-label">MVP Development</span>
+            </button>
+          </div>
+
+          <!-- Service Display -->
+          <div class="z-arsenal__display z-reveal" data-delay="0.2">
+            <!-- Websites -->
+            <div class="z-arsenal__panel is-active" data-panel="websites">
+              <div class="z-arsenal__panel-glow" style="--glow-color: rgba(99,102,241,0.1)"></div>
+              <span class="z-arsenal__panel-tag">Web Development</span>
+              <h3 class="z-arsenal__panel-title">Business Websites</h3>
+              <p class="z-arsenal__panel-desc">Premium, conversion-focused websites that don't just exist — they perform. Every page is engineered to turn visitors into customers, 24/7.</p>
+              <div class="z-arsenal__panel-features">
+                <span class="z-arsenal__feature">Custom Design</span>
+                <span class="z-arsenal__feature">Mobile-First</span>
+                <span class="z-arsenal__feature">SEO-Ready</span>
+                <span class="z-arsenal__feature">Lightning Fast</span>
+              </div>
+              <button class="z-btn z-btn--ghost z-arsenal__panel-cta" data-open-modal data-preselect="websites">Start this project →</button>
+            </div>
+
+            <!-- Landing Pages -->
+            <div class="z-arsenal__panel" data-panel="landing">
+              <div class="z-arsenal__panel-glow" style="--glow-color: rgba(139,92,246,0.1)"></div>
+              <span class="z-arsenal__panel-tag">Conversion Design</span>
+              <h3 class="z-arsenal__panel-title">Landing Pages</h3>
+              <p class="z-arsenal__panel-desc">Single-purpose pages built for one thing: action. Whether it's signups, sales, or leads — every element is optimized for maximum conversion.</p>
+              <div class="z-arsenal__panel-features">
+                <span class="z-arsenal__feature">A/B Tested</span>
+                <span class="z-arsenal__feature">High Converting</span>
+                <span class="z-arsenal__feature">Analytics Ready</span>
+                <span class="z-arsenal__feature">Fast Launch</span>
+              </div>
+              <button class="z-btn z-btn--ghost z-arsenal__panel-cta" data-open-modal data-preselect="landing">Start this project →</button>
+            </div>
+
+            <!-- QR Menu Systems -->
+            <div class="z-arsenal__panel" data-panel="qr">
+              <div class="z-arsenal__panel-glow" style="--glow-color: rgba(245,158,11,0.1)"></div>
+              <span class="z-arsenal__panel-tag">Restaurant Tech</span>
+              <h3 class="z-arsenal__panel-title">QR Menu Systems</h3>
+              <p class="z-arsenal__panel-desc">Digital menus that feel premium, load instantly, and turn every table into a self-service ordering powerhouse. No app downloads needed.</p>
+              <div class="z-arsenal__panel-features">
+                <span class="z-arsenal__feature">Instant Load</span>
+                <span class="z-arsenal__feature">Easy Updates</span>
+                <span class="z-arsenal__feature">Multi-Language</span>
+                <span class="z-arsenal__feature">Order Integration</span>
+              </div>
+              <button class="z-btn z-btn--ghost z-arsenal__panel-cta" data-open-modal data-preselect="qr">Start this project →</button>
+            </div>
+
+            <!-- Google Optimization -->
+            <div class="z-arsenal__panel" data-panel="google">
+              <div class="z-arsenal__panel-glow" style="--glow-color: rgba(34,197,94,0.1)"></div>
+              <span class="z-arsenal__panel-tag">Local SEO</span>
+              <h3 class="z-arsenal__panel-title">Google Business Optimization</h3>
+              <p class="z-arsenal__panel-desc">Dominate local search. We optimize your Google Business Profile to ensure you're the first name people see — and trust — when they search.</p>
+              <div class="z-arsenal__panel-features">
+                <span class="z-arsenal__feature">Profile Audit</span>
+                <span class="z-arsenal__feature">Review Strategy</span>
+                <span class="z-arsenal__feature">Local Rankings</span>
+                <span class="z-arsenal__feature">Maps Optimization</span>
+              </div>
+              <button class="z-btn z-btn--ghost z-arsenal__panel-cta" data-open-modal data-preselect="google">Start this project →</button>
+            </div>
+
+            <!-- WhatsApp Ordering -->
+            <div class="z-arsenal__panel" data-panel="whatsapp">
+              <div class="z-arsenal__panel-glow" style="--glow-color: rgba(37,211,102,0.1)"></div>
+              <span class="z-arsenal__panel-tag">Commerce</span>
+              <h3 class="z-arsenal__panel-title">WhatsApp Ordering Systems</h3>
+              <p class="z-arsenal__panel-desc">Turn WhatsApp into your 24/7 sales channel. Automated catalogs, order flows, and payment integration — where your customers already are.</p>
+              <div class="z-arsenal__panel-features">
+                <span class="z-arsenal__feature">Auto Catalog</span>
+                <span class="z-arsenal__feature">Order Tracking</span>
+                <span class="z-arsenal__feature">Payment Links</span>
+                <span class="z-arsenal__feature">Bot Automation</span>
+              </div>
+              <button class="z-btn z-btn--ghost z-arsenal__panel-cta" data-open-modal data-preselect="whatsapp">Start this project →</button>
+            </div>
+
+            <!-- Branding -->
+            <div class="z-arsenal__panel" data-panel="branding">
+              <div class="z-arsenal__panel-glow" style="--glow-color: rgba(236,72,153,0.1)"></div>
+              <span class="z-arsenal__panel-tag">Brand Design</span>
+              <h3 class="z-arsenal__panel-title">Logo & Brand Identity</h3>
+              <p class="z-arsenal__panel-desc">A brand that speaks before you do. We craft identities that are memorable, scalable, and instantly recognizable across every touchpoint.</p>
+              <div class="z-arsenal__panel-features">
+                <span class="z-arsenal__feature">Logo Design</span>
+                <span class="z-arsenal__feature">Color System</span>
+                <span class="z-arsenal__feature">Typography</span>
+                <span class="z-arsenal__feature">Brand Guide</span>
+              </div>
+              <button class="z-btn z-btn--ghost z-arsenal__panel-cta" data-open-modal data-preselect="branding">Start this project →</button>
+            </div>
+
+            <!-- AI Automations -->
+            <div class="z-arsenal__panel" data-panel="ai">
+              <div class="z-arsenal__panel-glow" style="--glow-color: rgba(6,182,212,0.1)"></div>
+              <span class="z-arsenal__panel-tag">Automation</span>
+              <h3 class="z-arsenal__panel-title">AI Automations</h3>
+              <p class="z-arsenal__panel-desc">Stop doing manually what machines do better. We build intelligent automations that save hours, reduce errors, and scale your operations effortlessly.</p>
+              <div class="z-arsenal__panel-features">
+                <span class="z-arsenal__feature">Chatbots</span>
+                <span class="z-arsenal__feature">Workflows</span>
+                <span class="z-arsenal__feature">Content AI</span>
+                <span class="z-arsenal__feature">Data Pipelines</span>
+              </div>
+              <button class="z-btn z-btn--ghost z-arsenal__panel-cta" data-open-modal data-preselect="ai">Start this project →</button>
+            </div>
+
+            <!-- Resume -->
+            <div class="z-arsenal__panel" data-panel="resume">
+              <div class="z-arsenal__panel-glow" style="--glow-color: rgba(251,146,60,0.1)"></div>
+              <span class="z-arsenal__panel-tag">Career</span>
+              <h3 class="z-arsenal__panel-title">Resume Optimization</h3>
+              <p class="z-arsenal__panel-desc">Your resume isn't a document — it's your first pitch. We redesign it to pass ATS filters and make hiring managers stop scrolling.</p>
+              <div class="z-arsenal__panel-features">
+                <span class="z-arsenal__feature">ATS-Optimized</span>
+                <span class="z-arsenal__feature">Visual Design</span>
+                <span class="z-arsenal__feature">Content Writing</span>
+                <span class="z-arsenal__feature">Industry-Specific</span>
+              </div>
+              <button class="z-btn z-btn--ghost z-arsenal__panel-cta" data-open-modal data-preselect="resume">Start this project →</button>
+            </div>
+
+            <!-- LinkedIn -->
+            <div class="z-arsenal__panel" data-panel="linkedin">
+              <div class="z-arsenal__panel-glow" style="--glow-color: rgba(59,130,246,0.1)"></div>
+              <span class="z-arsenal__panel-tag">Personal Brand</span>
+              <h3 class="z-arsenal__panel-title">LinkedIn Optimization</h3>
+              <p class="z-arsenal__panel-desc">Turn your LinkedIn from a digital resume into a lead-generating, authority-building personal brand that opens doors you didn't know existed.</p>
+              <div class="z-arsenal__panel-features">
+                <span class="z-arsenal__feature">Profile Overhaul</span>
+                <span class="z-arsenal__feature">Content Strategy</span>
+                <span class="z-arsenal__feature">Network Growth</span>
+                <span class="z-arsenal__feature">Authority Building</span>
+              </div>
+              <button class="z-btn z-btn--ghost z-arsenal__panel-cta" data-open-modal data-preselect="linkedin">Start this project →</button>
+            </div>
+
+            <!-- MVP Development -->
+            <div class="z-arsenal__panel" data-panel="mvp">
+              <div class="z-arsenal__panel-glow" style="--glow-color: rgba(168,85,247,0.1)"></div>
+              <span class="z-arsenal__panel-tag">Startup</span>
+              <h3 class="z-arsenal__panel-title">MVP Development</h3>
+              <p class="z-arsenal__panel-desc">From idea to shipped product in weeks, not months. We build the leanest, most impactful version of your product so you can validate fast and iterate faster.</p>
+              <div class="z-arsenal__panel-features">
+                <span class="z-arsenal__feature">Rapid Prototyping</span>
+                <span class="z-arsenal__feature">User Testing</span>
+                <span class="z-arsenal__feature">Scalable Code</span>
+                <span class="z-arsenal__feature">Launch Strategy</span>
+              </div>
+              <button class="z-btn z-btn--ghost z-arsenal__panel-cta" data-open-modal data-preselect="mvp">Start this project →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- SCENE 5 — CONVICTION / WHY US           -->
+    <!-- ═══════════════════════════════════════ -->
+    <section class="z-scene z-scene--conviction" id="conviction">
+      <div class="z-scene__inner">
+        <span class="z-scene__label z-reveal">05 / CONVICTION</span>
+
+        <div class="z-conviction__statements">
+          <div class="z-conviction__statement z-reveal">
+            <h2 class="z-conviction__text">We obsess so<br>you don't have to.</h2>
+          </div>
+          <div class="z-conviction__divider z-reveal-line"></div>
+          <div class="z-conviction__statement z-reveal">
+            <h2 class="z-conviction__text">Speed without<br>compromise.</h2>
+          </div>
+          <div class="z-conviction__divider z-reveal-line"></div>
+          <div class="z-conviction__statement z-reveal">
+            <h2 class="z-conviction__text">Built for businesses<br>that refuse to blend in.</h2>
+          </div>
+          <div class="z-conviction__divider z-reveal-line"></div>
+          <div class="z-conviction__statement z-reveal">
+            <h2 class="z-conviction__text">Not an agency.<br><span class="z-text-accent">A growth partner.</span></h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCROLL MARQUEE 4 -->
+    <div class="z-scroll-marquee" aria-hidden="true" data-direction="right">
+      <span class="z-scroll-marquee__text">ZENTRO</span>
+      <span class="z-scroll-marquee__dot">·</span>
+      <span class="z-scroll-marquee__text">ZENTRO</span>
+      <span class="z-scroll-marquee__dot">·</span>
+      <span class="z-scroll-marquee__text">ZENTRO</span>
+      <span class="z-scroll-marquee__dot">·</span>
+      <span class="z-scroll-marquee__text">ZENTRO</span>
+      <span class="z-scroll-marquee__dot">·</span>
+      <span class="z-scroll-marquee__text">ZENTRO</span>
+    </div>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- SCENE 6 — IGNITION / CTA + FOOTER       -->
+    <!-- ═══════════════════════════════════════ -->
+    <section class="z-scene z-scene--ignition" id="ignition">
+      <div class="z-scene__inner z-ignition">
+        <span class="z-scene__label z-reveal">06 / IGNITION</span>
+
+        <h2 class="z-ignition__headline z-reveal-words">Let's build something people remember.</h2>
+
+        <button class="z-btn z-btn--primary z-btn--large z-ignition__cta z-reveal" data-delay="0.3" id="ignitionCta">
+          <span>Start Your Project</span>
+          <svg width="20" height="20" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- FOOTER                                  -->
+  <!-- ═══════════════════════════════════════ -->
+  <footer class="z-footer">
+    <div class="z-footer__inner">
+      <div class="z-footer__top">
+        <div class="z-footer__brand">
+          <span class="z-footer__logo">ZENTRO</span>
+          <p class="z-footer__tagline">Building Products People Remember.</p>
+        </div>
+        <div class="z-footer__links">
+          <div class="z-footer__col">
+            <h4 class="z-footer__col-title">Studio</h4>
+            <a href="#philosophy" class="z-footer__link">Philosophy</a>
+            <a href="#solutions" class="z-footer__link">Solutions</a>
+            <a href="#arsenal" class="z-footer__link">Services</a>
+          </div>
+          <div class="z-footer__col">
+            <h4 class="z-footer__col-title">Connect</h4>
+            <a href="mailto:pavansa0201@gmail.com" class="z-footer__link">Email</a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="z-footer__link">Instagram</a>
+            <a href="https://www.linkedin.com/in/pavans01?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" class="z-footer__link">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+      <div class="z-footer__divider"></div>
+      <div class="z-footer__bottom">
+        <p class="z-footer__copy">&copy; 2025 Zentro. All rights reserved.</p>
+        <p class="z-footer__credit">Crafted with obsession.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- START PROJECT MODAL                     -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="z-modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Start a project">
+    <div class="z-modal__backdrop" id="modalBackdrop"></div>
+    <div class="z-modal__container">
+      <div class="z-modal__header">
+        <span class="z-modal__logo">ZENTRO</span>
+        <button class="z-modal__close" id="modalClose" aria-label="Close modal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="z-modal__progress">
+        <div class="z-modal__progress-bar" id="progressBar"></div>
+      </div>
+
+      <!-- Steps Container -->
+      <div class="z-modal__steps" id="modalSteps">
+
+        <!-- Step 1: Services -->
+        <div class="z-modal__step is-active" data-step="1">
+          <span class="z-modal__step-count">Step 1 of 7</span>
+          <h3 class="z-modal__step-title">What can we build for you?</h3>
+          <p class="z-modal__step-desc">Select all that apply.</p>
+          <div class="z-modal__chips" id="serviceChips">
+            <button class="z-chip" data-value="websites">Business Website</button>
+            <button class="z-chip" data-value="landing">Landing Page</button>
+            <button class="z-chip" data-value="qr">QR Menu System</button>
+            <button class="z-chip" data-value="google">Google Optimization</button>
+            <button class="z-chip" data-value="instagram">Instagram Content Pack</button>
+            <button class="z-chip" data-value="whatsapp">WhatsApp Ordering</button>
+            <button class="z-chip" data-value="branding">Logo & Brand Identity</button>
+            <button class="z-chip" data-value="ai">AI Automations</button>
+            <button class="z-chip" data-value="mvp">MVP Development</button>
+            <button class="z-chip" data-value="resume">Resume Optimization</button>
+            <button class="z-chip" data-value="linkedin">LinkedIn Optimization</button>
+          </div>
+        </div>
+
+        <!-- Step 2: Business Info -->
+        <div class="z-modal__step" data-step="2">
+          <span class="z-modal__step-count">Step 2 of 7</span>
+          <h3 class="z-modal__step-title">Tell us about your business.</h3>
+          <p class="z-modal__step-desc">Help us understand who you are.</p>
+          <div class="z-modal__fields">
+            <div class="z-field">
+              <label class="z-field__label" for="bizName">Business Name</label>
+              <input type="text" class="z-field__input" id="bizName" placeholder="e.g., Brew & Co Coffee">
+            </div>
+            <div class="z-field">
+              <label class="z-field__label" for="bizIndustry">Industry</label>
+              <select class="z-field__input z-field__select" id="bizIndustry">
+                <option value="" disabled selected>Select your industry</option>
+                <option value="cafe">Café / Coffee Shop</option>
+                <option value="restaurant">Restaurant / Food</option>
+                <option value="retail">Retail / E-commerce</option>
+                <option value="health">Health & Wellness</option>
+                <option value="tech">Tech / SaaS</option>
+                <option value="professional">Professional Services</option>
+                <option value="personal">Personal Brand</option>
+                <option value="startup">Startup</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="z-field">
+              <label class="z-field__label" for="bizUrl">Current Website <span class="z-field__optional">(optional)</span></label>
+              <input type="url" class="z-field__input" id="bizUrl" placeholder="https://yoursite.com">
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3: Goals -->
+        <div class="z-modal__step" data-step="3">
+          <span class="z-modal__step-count">Step 3 of 7</span>
+          <h3 class="z-modal__step-title">What's the vision?</h3>
+          <p class="z-modal__step-desc">Describe your dream outcome. What does success look like?</p>
+          <div class="z-modal__fields">
+            <div class="z-field">
+              <textarea class="z-field__input z-field__textarea" id="goals" rows="5" placeholder="e.g., I want my restaurant to feel premium online. I need customers to find us on Google, scan a QR code at the table, and order without waiting..."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4: Budget -->
+        <div class="z-modal__step" data-step="4">
+          <span class="z-modal__step-count">Step 4 of 7</span>
+          <h3 class="z-modal__step-title">Investment range.</h3>
+          <p class="z-modal__step-desc">This helps us tailor the right scope for your project.</p>
+          <div class="z-modal__budget-cards" id="budgetCards">
+            <button class="z-budget-card" data-value="starter">
+              <span class="z-budget-card__label">Starter</span>
+              <span class="z-budget-card__range">₹10K – ₹25K</span>
+              <span class="z-budget-card__desc">Single service, focused scope</span>
+            </button>
+            <button class="z-budget-card" data-value="growth">
+              <span class="z-budget-card__label">Growth</span>
+              <span class="z-budget-card__range">₹25K – ₹75K</span>
+              <span class="z-budget-card__desc">Multi-service, expanded scope</span>
+            </button>
+            <button class="z-budget-card" data-value="scale">
+              <span class="z-budget-card__label">Scale</span>
+              <span class="z-budget-card__range">₹75K – ₹2L</span>
+              <span class="z-budget-card__desc">Full suite, premium delivery</span>
+            </button>
+            <button class="z-budget-card" data-value="enterprise">
+              <span class="z-budget-card__label">Enterprise</span>
+              <span class="z-budget-card__range">₹2L+</span>
+              <span class="z-budget-card__desc">End-to-end, white-glove service</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 5: Timeline -->
+        <div class="z-modal__step" data-step="5">
+          <span class="z-modal__step-count">Step 5 of 7</span>
+          <h3 class="z-modal__step-title">When do you need it?</h3>
+          <p class="z-modal__step-desc">Select the timeline that works for you.</p>
+          <div class="z-modal__timeline-cards" id="timelineCards">
+            <button class="z-timeline-card" data-value="asap">
+              <span class="z-timeline-card__icon">⚡</span>
+              <span class="z-timeline-card__label">ASAP</span>
+              <span class="z-timeline-card__desc">Rush delivery</span>
+            </button>
+            <button class="z-timeline-card" data-value="2-4weeks">
+              <span class="z-timeline-card__icon">🚀</span>
+              <span class="z-timeline-card__label">2–4 Weeks</span>
+              <span class="z-timeline-card__desc">Standard delivery</span>
+            </button>
+            <button class="z-timeline-card" data-value="1-2months">
+              <span class="z-timeline-card__icon">📐</span>
+              <span class="z-timeline-card__label">1–2 Months</span>
+              <span class="z-timeline-card__desc">Detailed build</span>
+            </button>
+            <button class="z-timeline-card" data-value="flexible">
+              <span class="z-timeline-card__icon">🌊</span>
+              <span class="z-timeline-card__label">Flexible</span>
+              <span class="z-timeline-card__desc">No rush, do it right</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 6: Project Description -->
+        <div class="z-modal__step" data-step="6">
+          <span class="z-modal__step-count">Step 6 of 7</span>
+          <h3 class="z-modal__step-title">Anything else we should know?</h3>
+          <p class="z-modal__step-desc">Share references, links, ideas — anything that helps us understand your vision better.</p>
+          <div class="z-modal__fields">
+            <div class="z-field">
+              <textarea class="z-field__input z-field__textarea" id="projectDesc" rows="6" placeholder="e.g., I love how Apple presents their products. I want a similar clean, minimalist feel for my cafe website..."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 7: Contact Info -->
+        <div class="z-modal__step" data-step="7">
+          <span class="z-modal__step-count">Step 7 of 7</span>
+          <h3 class="z-modal__step-title">How do we reach you?</h3>
+          <p class="z-modal__step-desc">We'll get back within 24 hours.</p>
+          <div class="z-modal__fields">
+            <div class="z-field">
+              <label class="z-field__label" for="contactName">Your Name</label>
+              <input type="text" class="z-field__input" id="contactName" placeholder="John Doe">
+            </div>
+            <div class="z-field">
+              <label class="z-field__label" for="contactEmail">Email Address</label>
+              <input type="email" class="z-field__input" id="contactEmail" placeholder="john@example.com">
+            </div>
+            <div class="z-field">
+              <label class="z-field__label" for="contactPhone">Phone / WhatsApp</label>
+              <input type="tel" class="z-field__input" id="contactPhone" placeholder="+91 98765 43210">
+            </div>
+            <div class="z-field">
+              <label class="z-field__label">Preferred Contact Method</label>
+              <div class="z-field__radio-group">
+                <label class="z-radio"><input type="radio" name="contactMethod" value="email" checked><span class="z-radio__mark"></span>Email</label>
+                <label class="z-radio"><input type="radio" name="contactMethod" value="whatsapp"><span class="z-radio__mark"></span>WhatsApp</label>
+                <label class="z-radio"><input type="radio" name="contactMethod" value="call"><span class="z-radio__mark"></span>Phone Call</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Success Screen -->
+        <div class="z-modal__step z-modal__success" data-step="success">
+          <div class="z-success__icon" id="successIcon">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+              <circle cx="32" cy="32" r="30" stroke="var(--z-accent)" stroke-width="2" opacity="0.2"/>
+              <circle cx="32" cy="32" r="30" stroke="var(--z-accent)" stroke-width="2" class="z-success__circle"/>
+              <path d="M20 32L28 40L44 24" stroke="var(--z-accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="z-success__check"/>
+            </svg>
+          </div>
+          <h3 class="z-modal__step-title">We're on it.</h3>
+          <p class="z-modal__step-desc">Your project brief has been received. We'll review everything and get back to you within 24 hours. Get ready — something remarkable is about to begin.</p>
+          <button class="z-btn z-btn--primary z-modal__done" id="modalDone">Done</button>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="z-modal__nav" id="modalNav">
+        <button class="z-btn z-btn--ghost z-modal__back" id="modalBack">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M3 8L7 4M3 8L7 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Back</span>
+        </button>
+        <button class="z-btn z-btn--primary z-modal__next" id="modalNext">
+          <span>Continue</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+</body>
+</html>
